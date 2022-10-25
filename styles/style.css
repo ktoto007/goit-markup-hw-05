@@ -207,6 +207,7 @@ img {
   background-color: var(--accent-color);
   color: var(--hero-color);
   cursor: pointer;
+  transition: background-color var(--time) var(--cubic);
 }
 
 .hero-btn:hover,
