@@ -12,6 +12,9 @@
   --svg-color: #afb1b8;
   --main-text: Roboto;
   --additional-text: Raleway;
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 250ms;
 }
 
 /*Основные стили на страницу*/
@@ -87,11 +90,13 @@ img {
   margin-right: 0;
 }
 .site-nav .link {
+  position: relative;
   color: var(--main-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--time) var(--cubic);
 }
 
 .connection {
@@ -103,6 +108,7 @@ img {
 
 .connection-item-icon {
   margin-right: 10px;
+  transition: fill var(--time) var(--cubic);
 }
 
 .connection .item:last-child {
@@ -117,6 +123,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--time) var(--cubic);
 }
 
 .site-nav .link:hover,
@@ -131,6 +138,17 @@ img {
 
 .site-nav .this-page {
   color: var(--accent-color);
+}
+
+.site-nav .this-page::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45px;
+  transform: translate(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
 }
 /*Общии стили для снятия лишнего с ссылок и элементов списка*/
 .list {
