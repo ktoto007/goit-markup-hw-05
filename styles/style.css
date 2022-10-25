@@ -604,3 +604,42 @@ img {
 .portfolio .link:focus .text-container {
   transform: translateY(-100%);
 }
+
+/*Стили модалки*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--main-bg-color);
+}
+
+.modal-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  margin-left: auto;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--svg-color);
+  border-radius: 15px;
+  cursor: pointer;
+}
